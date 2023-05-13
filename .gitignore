@@ -1,0 +1,93 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+!**/src/main/resources/dist
+!**/src/main/resources/node_modules
+/src/main/resources/admin/admin/dist/css/app.d1bb3904.css
+/src/main/resources/admin/admin/dist/css/chunk-vendors.1f0a25b2.css
+/src/main/resources/admin/admin/dist/fonts/element-icons.535877f5.woff
+/src/main/resources/admin/admin/dist/fonts/element-icons.732389de.ttf
+/src/main/resources/admin/admin/dist/img/404.3648f234.png
+/src/main/resources/admin/admin/dist/img/zhongguo.20798bfa.png
+/src/main/resources/admin/admin/dist/js/app.eaec7f1c.js
+/src/main/resources/admin/admin/dist/js/app.eaec7f1c.js.map
+/src/main/resources/admin/admin/dist/js/chunk-vendors.0c3d99ae.js
+/src/main/resources/admin/admin/dist/js/chunk-vendors.0c3d99ae.js.map
+/src/main/resources/admin/admin/dist/favicon.ico
+/src/main/resources/admin/admin/dist/index.html
+/src/main/resources/admin/admin/node_modulesHELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+!**/src/main/resources/dist
+!**/src/main/resources/node_modules
+/src/main/resources/admin/admin/dist/css/app.d1bb3904.css
+/src/main/resources/admin/admin/dist/css/chunk-vendors.1f0a25b2.css
+/src/main/resources/admin/admin/dist/fonts/element-icons.535877f5.woff
+/src/main/resources/admin/admin/dist/fonts/element-icons.732389de.ttf
+/src/main/resources/admin/admin/dist/img/404.3648f234.png
+/src/main/resources/admin/admin/dist/img/zhongguo.20798bfa.png
+/src/main/resources/admin/admin/dist/js/app.eaec7f1c.js
+/src/main/resources/admin/admin/dist/js/app.eaec7f1c.js.map
+/src/main/resources/admin/admin/dist/js/chunk-vendors.0c3d99ae.js
+/src/main/resources/admin/admin/dist/js/chunk-vendors.0c3d99ae.js.map
+/src/main/resources/admin/admin/dist/favicon.ico
+/src/main/resources/admin/admin/dist/index.html
+/src/main/resources/admin/admin/node_modules
