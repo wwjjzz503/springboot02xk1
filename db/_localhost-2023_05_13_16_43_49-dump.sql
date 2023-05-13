@@ -124,7 +124,7 @@ CREATE TABLE `token` (
 
 LOCK TABLES `token` WRITE;
 /*!40000 ALTER TABLE `token` DISABLE KEYS */;
-INSERT INTO `token` (`id`, `userid`, `username`, `tablename`, `role`, `token`, `addtime`, `expiratedtime`) VALUES (1,21,'经理账号1','xiangmujingli','项目经理','ccl1l3hz5p6iat6qbcqg3l8af25s251h','2023-05-11 12:01:03','2023-05-11 13:01:03'),(2,1,'admin','users','管理员','6r0zx2j3n06w1aeyyip8rp09lzyt1p0v','2023-05-13 06:19:08','2023-05-13 10:19:02');
+INSERT INTO `token` (`id`, `userid`, `username`, `tablename`, `role`, `token`, `addtime`, `expiratedtime`) VALUES (1,21,'经理账号1','xiangmujingli','项目经理','ccl1l3hz5p6iat6qbcqg3l8af25s251h','2023-05-11 12:01:03','2023-05-11 13:01:03'),(2,1,'admin','users','管理员','wpt5wee0vy5tw0mghsk6mrq347h29wns','2023-05-13 06:19:08','2023-05-13 12:02:49');
 /*!40000 ALTER TABLE `token` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -335,6 +335,13 @@ CREATE TABLE `xiangmuxinxi` (
   `fabushijian` date DEFAULT NULL COMMENT '发布时间',
   `jinglizhanghao` varchar(200) DEFAULT NULL COMMENT '经理账号',
   `jinglixingming` varchar(200) DEFAULT NULL COMMENT '经理姓名',
+  `xiangmujindu` varchar(40) DEFAULT NULL,
+  `tourushijian` int DEFAULT NULL,
+  `chengbenjine` float DEFAULT NULL,
+  `shengyutianshu` int DEFAULT NULL,
+  `yuqimubiao` varchar(40) DEFAULT NULL,
+  `progress` float DEFAULT NULL,
+  `progress_time` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `xiangmubianhao` (`xiangmubianhao`)
 ) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COMMENT='项目信息';
@@ -346,7 +353,7 @@ CREATE TABLE `xiangmuxinxi` (
 
 LOCK TABLES `xiangmuxinxi` WRITE;
 /*!40000 ALTER TABLE `xiangmuxinxi` DISABLE KEYS */;
-INSERT INTO `xiangmuxinxi` (`id`, `addtime`, `xiangmubianhao`, `xiangmumingcheng`, `xiangmufenlei`, `xiangmuneirong`, `fabushijian`, `jinglizhanghao`, `jinglixingming`) VALUES (41,'2023-05-11 11:59:31','1111111111','项目名称1','项目分类1','项目内容1','2023-05-11','经理账号1','经理姓名1'),(42,'2023-05-11 11:59:31','2222222222','项目名称2','项目分类2','项目内容2','2023-05-11','经理账号2','经理姓名2'),(43,'2023-05-11 11:59:31','3333333333','项目名称3','项目分类3','项目内容3','2023-05-11','经理账号3','经理姓名3'),(44,'2023-05-11 11:59:31','4444444444','项目名称4','项目分类4','项目内容4','2023-05-11','经理账号4','经理姓名4'),(45,'2023-05-11 11:59:31','5555555555','项目名称5','项目分类5','项目内容5','2023-05-11','经理账号5','经理姓名5'),(46,'2023-05-11 11:59:31','6666666666','项目名称6','项目分类6','项目内容6','2023-05-11','经理账号6','经理姓名6'),(47,'2023-05-11 11:59:31','7777777777','项目名称7','项目分类7','项目内容7','2023-05-11','经理账号7','经理姓名7'),(48,'2023-05-11 11:59:31','8888888888','项目名称8','项目分类8','项目内容8','2023-05-11','经理账号8','经理姓名8');
+INSERT INTO `xiangmuxinxi` (`id`, `addtime`, `xiangmubianhao`, `xiangmumingcheng`, `xiangmufenlei`, `xiangmuneirong`, `fabushijian`, `jinglizhanghao`, `jinglixingming`, `xiangmujindu`, `tourushijian`, `chengbenjine`, `shengyutianshu`, `yuqimubiao`, `progress`, `progress_time`) VALUES (41,'2023-05-11 11:59:31','1111111111','项目名称1','项目分类1','项目内容1','2023-05-11','经理账号1','经理姓名1','进行中',10,424,5,'完成',0.1,-1),(42,'2023-05-11 11:59:31','2222222222','项目名称2','项目分类2','项目内容2','2023-05-11','经理账号2','经理姓名2','进行中',10,424,5,'完成',0.1,-1),(43,'2023-05-11 11:59:31','3333333333','项目名称3','项目分类3','项目内容3','2023-05-11','经理账号3','经理姓名3','进行中',10,424,5,'完成',0.1,-1),(44,'2023-05-11 11:59:31','4444444444','项目名称4','项目分类4','项目内容4','2023-05-11','经理账号4','经理姓名4','进行中',10,424,5,'完成',0.1,-1),(45,'2023-05-11 11:59:31','5555555555','项目名称5','项目分类5','项目内容5','2023-05-11','经理账号5','经理姓名5','进行中',10,424,5,'完成',0.1,-1),(46,'2023-05-11 11:59:31','6666666666','项目名称6','项目分类6','项目内容6','2023-05-11','经理账号6','经理姓名6','进行中',10,424,5,'完成',0.1,-1),(47,'2023-05-11 11:59:31','7777777777','项目名称7','项目分类7','项目内容7','2023-05-11','经理账号7','经理姓名7','进行中',10,424,5,'完成',0.1,-1),(48,'2023-05-11 11:59:31','8888888888','项目名称8','项目分类8','项目内容8','2023-05-11','经理账号8','经理姓名8','进行中',10,424,5,'完成',0.1,-1);
 /*!40000 ALTER TABLE `xiangmuxinxi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -391,4 +398,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-13 17:26:56
+-- Dump completed on 2023-05-13 19:47:34
