@@ -128,7 +128,7 @@ export default {
           "macarons"
         );
         this.$http({
-          url: "xiangmujindu/chart-histogram",
+          url: "xiangmujindu/chart-interleaved",
           method: "get",
         }).then(({ data }) => {
           console.log(data);
