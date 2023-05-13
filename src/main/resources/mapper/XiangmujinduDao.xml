@@ -17,8 +17,8 @@
         <result property="xingming" column="xingming"/>
         <result property="jinglizhanghao" column="jinglizhanghao"/>
         <result property="jinglixingming" column="jinglixingming"/>
+        <result property="progress" column="progress"/>
     </resultMap>
-
 	<select id="selectListVO"
 		resultType="com.entity.vo.XiangmujinduVO" >
 		SELECT * FROM xiangmujindu  xiangmujindu         
@@ -83,6 +83,9 @@
         sum(case when xiangmujindu in ('进行中') then 1 else 0 end) as 进行中,        sum(case when xiangmujindu in ('已完成') then 1 else 0 end) as 已完成        from xiangmujindu
         <where> 1=1 ${ew.sqlSegment}</where>
         group by xiangmumingcheng
+    </select>
+    <select id="selectAll" resultType="com.entity.Project">
+        select xiangmumingcheng,progress from xiangmujindu
     </select>
 
 </mapper>

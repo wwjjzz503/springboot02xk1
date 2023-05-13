@@ -52,8 +52,6 @@ public class XiangmujingliController {
     @Autowired
     private XiangmujingliService xiangmujingliService;
 
-
-    
 	@Autowired
 	private TokenService tokenService;
 	
@@ -251,6 +249,12 @@ public class XiangmujingliController {
     public R delete(@RequestBody Long[] ids){
         xiangmujingliService.deleteBatchIds(Arrays.asList(ids));
         return R.ok();
+    }
+
+    @RequestMapping("/account-list")
+    public R accountList(){
+        List<XiangmujingliEntity> xiangmujingliEntities = xiangmujingliService.selectList(null);
+        return R.ok().put("data",xiangmujingliEntities);
     }
     
 	

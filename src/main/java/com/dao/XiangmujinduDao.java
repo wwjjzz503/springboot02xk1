@@ -1,5 +1,6 @@
 package com.dao;
 
+import com.entity.Project;
 import com.entity.XiangmujinduEntity;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.Map;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.pagination.Pagination;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import com.entity.vo.XiangmujinduVO;
 import com.entity.view.XiangmujinduView;
@@ -19,6 +21,7 @@ import com.entity.view.XiangmujinduView;
  * @email 
  * @date 2023-05-11 19:59:19
  */
+@Mapper
 public interface XiangmujinduDao extends BaseMapper<XiangmujinduEntity> {
 	
 	List<XiangmujinduVO> selectListVO(@Param("ew") Wrapper<XiangmujinduEntity> wrapper);
@@ -41,4 +44,5 @@ public interface XiangmujinduDao extends BaseMapper<XiangmujinduEntity> {
 
     List<Map<String, Object>> xiangmumingchengxiangmujinduTypeStat(@Param("params") Map<String, Object> params,@Param("ew") Wrapper<XiangmujinduEntity> wrapper);
 
+	List<Project> selectAll();
 }

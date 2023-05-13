@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
+import com.entity.Project;
 import com.utils.ValidatorUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -375,6 +376,17 @@ public class XiangmujinduController {
         int count = xiangmujinduService.selectCount(MPUtil.sort(MPUtil.between(MPUtil.likeOrEq(ew, xiangmujindu), params), params));
         return R.ok().put("data", count);
     }
-
+    @RequestMapping("chart-progress")
+    public R progress(){
+        List<Project> projects = new ArrayList<>();
+        List<XiangmujinduEntity> xiangmujinduEntities = xiangmujinduService.selectList(null);
+        for(XiangmujinduEntity xiangmujindu:xiangmujinduEntities){
+            Project project = new Project();
+            project.setName(xiangmujindu.getXiangmumingcheng());
+            project.setValue(xiangmujindu.getProgress());
+            projects.add(project);
+        }
+        return R.ok().put("data",projects);
+    }
 
 }
