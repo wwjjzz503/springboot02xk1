@@ -400,4 +400,16 @@ public class XiangmujinduController {
         }
         return R.ok().put("data",projects);
     }
+    @RequestMapping("chart-interleaved")
+    public R interleaved(){
+        List<Project> projects = new ArrayList<>();
+        List<XiangmujinduEntity> xiangmujinduEntities = xiangmujinduService.selectList(null);
+        for(XiangmujinduEntity xiangmujindu:xiangmujinduEntities){
+            Project project = new Project();
+            project.setName(xiangmujindu.getXiangmumingcheng());
+            project.setValue(xiangmujindu.getProgressTime());
+            projects.add(project);
+        }
+        return R.ok().put("data",projects);
+    }
 }

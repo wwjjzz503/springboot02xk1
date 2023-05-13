@@ -126,7 +126,8 @@ public class XiangmujinduEntity<T> implements Serializable {
 	private String jinglixingming;
 
 	private float progress;
-	
+
+	private int progressTime;
 	
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
 	@DateTimeFormat

@@ -91,6 +91,5 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 		    }
 		}
         throw new EIException("请先登录", 401);
-
     }
 }
