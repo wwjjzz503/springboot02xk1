@@ -124,7 +124,7 @@ CREATE TABLE `token` (
 
 LOCK TABLES `token` WRITE;
 /*!40000 ALTER TABLE `token` DISABLE KEYS */;
-INSERT INTO `token` (`id`, `userid`, `username`, `tablename`, `role`, `token`, `addtime`, `expiratedtime`) VALUES (1,21,'经理账号1','xiangmujingli','项目经理','ccl1l3hz5p6iat6qbcqg3l8af25s251h','2023-05-11 12:01:03','2023-05-11 13:01:03'),(2,1,'admin','users','管理员','lsfgrnzc99f9rtsmcv9qymnn3r1zoehv','2023-05-13 06:19:08','2023-05-13 09:07:40');
+INSERT INTO `token` (`id`, `userid`, `username`, `tablename`, `role`, `token`, `addtime`, `expiratedtime`) VALUES (1,21,'经理账号1','xiangmujingli','项目经理','ccl1l3hz5p6iat6qbcqg3l8af25s251h','2023-05-11 12:01:03','2023-05-11 13:01:03'),(2,1,'admin','users','管理员','6r0zx2j3n06w1aeyyip8rp09lzyt1p0v','2023-05-13 06:19:08','2023-05-13 10:19:02');
 /*!40000 ALTER TABLE `token` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -251,7 +251,7 @@ CREATE TABLE `xiangmujindu` (
 
 LOCK TABLES `xiangmujindu` WRITE;
 /*!40000 ALTER TABLE `xiangmujindu` DISABLE KEYS */;
-INSERT INTO `xiangmujindu` (`id`, `addtime`, `xiangmumingcheng`, `xiangmufenlei`, `xiangmujindu`, `tourushijian`, `chengbenjine`, `shengyutianshu`, `yuqimubiao`, `jinzhanqingkuang`, `zhanghao`, `xingming`, `jinglizhanghao`, `jinglixingming`, `progress`, `progress_time`) VALUES (61,'2023-05-11 11:59:31','项目名称1','项目分类1','进行中',1,1,1,'预期目标1','进展情况1','账号1','姓名1','经理账号1','经理姓名1',0.1,-1),(62,'2023-05-11 11:59:31','项目名称2','项目分类2','进行中',2,2,2,'预期目标2','进展情况2','账号2','姓名2','经理账号2','经理姓名2',0.2,-2),(63,'2023-05-11 11:59:31','项目名称3','项目分类3','进行中',3,3,3,'预期目标3','进展情况3','账号3','姓名3','经理账号3','经理姓名3',0.3,-3),(64,'2023-05-11 11:59:31','项目名称4','项目分类4','进行中',4,4,4,'预期目标4','进展情况4','账号4','姓名4','经理账号4','经理姓名4',0.4,-4),(65,'2023-05-11 11:59:31','项目名称5','项目分类5','进行中',5,5,5,'预期目标5','进展情况5','账号5','姓名5','经理账号5','经理姓名5',0.5,1),(66,'2023-05-11 11:59:31','项目名称6','项目分类6','进行中',6,6,6,'预期目标6','进展情况6','账号6','姓名6','经理账号6','经理姓名6',0.6,2),(67,'2023-05-11 11:59:31','项目名称7','项目分类7','进行中',7,7,7,'预期目标7','进展情况7','账号7','姓名7','经理账号7','经理姓名7',0.7,3),(68,'2023-05-11 11:59:31','项目名称8','项目分类8','进行中',8,8,8,'预期目标8','进展情况8','账号8','姓名8','经理账号8','经理姓名8',0.8,4);
+INSERT INTO `xiangmujindu` (`id`, `addtime`, `xiangmumingcheng`, `xiangmufenlei`, `xiangmujindu`, `tourushijian`, `chengbenjine`, `shengyutianshu`, `yuqimubiao`, `jinzhanqingkuang`, `zhanghao`, `xingming`, `jinglizhanghao`, `jinglixingming`, `progress`, `progress_time`) VALUES (61,'2023-05-11 11:59:31','项目名称1','项目分类1','进行中',1,124,1,'预期目标1','进展情况1','账号1','姓名1','经理账号1','经理姓名1',0.1,-1),(62,'2023-05-11 11:59:31','项目名称2','项目分类2','进行中',2,278,2,'预期目标2','进展情况2','账号2','姓名2','经理账号2','经理姓名2',0.2,-2),(63,'2023-05-11 11:59:31','项目名称3','项目分类3','进行中',3,399,3,'预期目标3','进展情况3','账号3','姓名3','经理账号3','经理姓名3',0.3,-3),(64,'2023-05-11 11:59:31','项目名称4','项目分类4','进行中',4,443,4,'预期目标4','进展情况4','账号4','姓名4','经理账号4','经理姓名4',0.4,-4),(65,'2023-05-11 11:59:31','项目名称5','项目分类5','进行中',5,53,5,'预期目标5','进展情况5','账号5','姓名5','经理账号5','经理姓名5',0.5,1),(66,'2023-05-11 11:59:31','项目名称6','项目分类6','进行中',6,51,6,'预期目标6','进展情况6','账号6','姓名6','经理账号6','经理姓名6',0.6,2),(67,'2023-05-11 11:59:31','项目名称7','项目分类7','进行中',7,566,7,'预期目标7','进展情况7','账号7','姓名7','经理账号7','经理姓名7',0.7,3),(68,'2023-05-11 11:59:31','项目名称8','项目分类8','进行中',8,378,8,'预期目标8','进展情况8','账号8','姓名8','经理账号8','经理姓名8',0.8,4);
 /*!40000 ALTER TABLE `xiangmujindu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -391,4 +391,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-13 17:13:43
+-- Dump completed on 2023-05-13 17:26:56
