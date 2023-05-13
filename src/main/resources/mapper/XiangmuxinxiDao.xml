@@ -4,15 +4,7 @@
 <mapper namespace="com.dao.XiangmuxinxiDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.entity.XiangmuxinxiEntity" id="xiangmuxinxiMap">
-        <result property="xiangmubianhao" column="xiangmubianhao"/>
-        <result property="xiangmumingcheng" column="xiangmumingcheng"/>
-        <result property="xiangmufenlei" column="xiangmufenlei"/>
-        <result property="xiangmuneirong" column="xiangmuneirong"/>
-        <result property="fabushijian" column="fabushijian"/>
-        <result property="jinglizhanghao" column="jinglizhanghao"/>
-        <result property="jinglixingming" column="jinglixingming"/>
-    </resultMap>
+
 
 	<select id="selectListVO"
 		resultType="com.entity.vo.XiangmuxinxiVO" >

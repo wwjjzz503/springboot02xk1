@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
+import com.baomidou.mybatisplus.plugins.Page;
 import com.entity.Project;
 import com.entity.XiangmujinduEntity;
 import com.utils.ValidatorUtils;
@@ -64,13 +65,9 @@ public class XiangmuxinxiController {
     @RequestMapping("/page")
     public R page(@RequestParam Map<String, Object> params,XiangmuxinxiEntity xiangmuxinxi,
 		HttpServletRequest request){
-		String tableName = request.getSession().getAttribute("tableName").toString();
-		if(tableName.equals("xiangmujingli")) {
-			xiangmuxinxi.setJinglizhanghao((String)request.getSession().getAttribute("username"));
-		}
-        EntityWrapper<XiangmuxinxiEntity> ew = new EntityWrapper<XiangmuxinxiEntity>();
 
-		PageUtils page = xiangmuxinxiService.queryPage(params, MPUtil.sort(MPUtil.between(MPUtil.likeOrEq(ew, xiangmuxinxi), params), params));
+
+		PageUtils page = xiangmuxinxiService.queryPage(params);
 
         return R.ok().put("data", page);
     }
