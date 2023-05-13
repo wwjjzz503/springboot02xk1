@@ -128,15 +128,12 @@ export default {
           "macarons"
         );
         this.$http({
-          url: "xiangmujindu/typeStat/xiangmujindu/xiangmumingcheng",
+          url: "xiangmujindu/chart-histogram",
           method: "get",
         }).then(({ data }) => {
-          // console.log(data)
+          console.log(data);
           if (data && data.code === 0) {
             let res = data.data;
-            const labelRight = {
-              position: "right",
-            };
             const option = {
               title: {
                 text: this.isProject + "进度正负交错图",
@@ -166,9 +163,7 @@ export default {
                 axisLabel: { show: true },
                 axisTick: { show: true },
                 splitLine: { show: true },
-                data: Array.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]).map(
-                  (i) => "项目" + i
-                ),
+                data: res.map((item) => item.name),
               },
               series: [
                 {
@@ -180,11 +175,11 @@ export default {
                     show: true,
                     formatter: "{b}",
                   },
-                  data: [10, -9, 2, 4, -2, 1, -1, 5, 7, 4, 5, -7].map((i) => {
+                  data: res.map((i) => {
                     return {
-                      value: i,
+                      value: i.value,
                       itemStyle: {
-                        color: i >= 0 ? "green" : "red",
+                        color: i.value >= 0 ? "green" : "red",
                       },
                     };
                   }),
@@ -278,7 +273,7 @@ export default {
           "macarons"
         );
         this.$http({
-          url: `xiangmujindu/value/xiangmumingcheng/tourushijian`,
+          url: `xiangmujindu/chart-progress`,
           method: "get",
         }).then(({ data }) => {
           if (data && data.code === 0) {
@@ -311,9 +306,7 @@ export default {
               },
               yAxis: {
                 type: "category",
-                data: Array.from(["1", "2", "3", "4", "5", "6"]).map((i) => ({
-                  value: "项目" + i,
-                })),
+                data: res.map((item) => item.name),
               },
               series: [
                 {
@@ -322,10 +315,10 @@ export default {
                   tooltip: {
                     valueFormatter: (value) => value + "%",
                   },
-                  data: [0.3, 0.8, 0.9, 0.4, 0.1, 0.6].map((i) => ({
-                    value: i * 100,
+                  data: res.map((i) => ({
+                    value: i.value * 100,
                     itemStyle: {
-                      color: "#" + i * 100 + "90ff",
+                      color: "#" + i.value * 100 + "90ff",
                     },
                   })),
                 },
@@ -348,28 +341,38 @@ export default {
           "macarons"
         );
         this.$http({
-          url: `xiangmujindu/value/xiangmumingcheng/tourushijian`,
+          url: `xiangmujindu/chart-histogram`,
           method: "get",
         }).then(({ data }) => {
           if (data && data.code === 0) {
             let res = data.data;
             const option = {
               title: {
-                text: "项目进度折线图",
+                text: "项目投入时间折线图",
+              },
+              tooltip: {
+                trigger: "axis",
+
+                axisPointer: {
+                  type: "shadow",
+                },
               },
               animationDuration: 3000,
               xAxis: {
                 type: "category",
-                data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                data: res.map((item) => item.name),
               },
               yAxis: {
                 type: "value",
               },
               series: [
                 {
-                  data: [0.1, 0.3, 0.5, 0.8, 0.7, 0.5, 0.5, 0.1, 0.2, 0.3],
+                  data: res.map((item) => item.value),
                   type: "line",
                   smooth: false,
+                  tooltip: {
+                    valueFormatter: (value) => value + "天",
+                  },
                   areaStyle: {
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                       {
