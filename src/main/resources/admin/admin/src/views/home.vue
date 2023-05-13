@@ -128,7 +128,7 @@ export default {
           "macarons"
         );
         this.$http({
-          url: "xiangmujindu/chart-interleaved",
+          url: "xiangmuxinxi/chart-interleaved",
           method: "get",
         }).then(({ data }) => {
           console.log(data);
@@ -204,7 +204,7 @@ export default {
           "macarons"
         );
         this.$http({
-          url: `xiangmujindu/value/xiangmumingcheng/chengbenjine`,
+          url: `xiangmuxinxi/chart-pie`,
           method: "get",
         }).then(({ data }) => {
           if (data && data.code === 0) {
@@ -242,16 +242,7 @@ export default {
                   itemStyle: {
                     borderRadius: 8,
                   },
-                  data: [
-                    { value: 40, name: "rose 1" },
-                    { value: 38, name: "rose 2" },
-                    { value: 32, name: "rose 3" },
-                    { value: 30, name: "rose 4" },
-                    { value: 28, name: "rose 5" },
-                    { value: 26, name: "rose 6" },
-                    { value: 22, name: "rose 7" },
-                    { value: 18, name: "rose 8" },
-                  ],
+                  data: res
                 },
               ],
             };
@@ -273,7 +264,7 @@ export default {
           "macarons"
         );
         this.$http({
-          url: `xiangmujindu/chart-progress`,
+          url: `xiangmuxinxi/chart-progress`,
           method: "get",
         }).then(({ data }) => {
           if (data && data.code === 0) {
@@ -341,7 +332,7 @@ export default {
           "macarons"
         );
         this.$http({
-          url: `xiangmujindu/chart-histogram`,
+          url: `xiangmuxinxi/chart-histogram`,
           method: "get",
         }).then(({ data }) => {
           if (data && data.code === 0) {
