@@ -388,5 +388,16 @@ public class XiangmujinduController {
         }
         return R.ok().put("data",projects);
     }
-
+    @RequestMapping("chart-histogram")
+    public R histogram(){
+        List<Project> projects = new ArrayList<>();
+        List<XiangmujinduEntity> xiangmujinduEntities = xiangmujinduService.selectList(null);
+        for(XiangmujinduEntity xiangmujindu:xiangmujinduEntities){
+            Project project = new Project();
+            project.setName(xiangmujindu.getXiangmumingcheng());
+            project.setValue(xiangmujindu.getShengyutianshu());
+            projects.add(project);
+        }
+        return R.ok().put("data",projects);
+    }
 }

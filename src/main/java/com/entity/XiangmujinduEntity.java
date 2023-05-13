@@ -87,7 +87,7 @@ public class XiangmujinduEntity<T> implements Serializable {
 	 * 剩余天数
 	 */
 					
-	private String shengyutianshu;
+	private int shengyutianshu;
 	
 	/**
 	 * 预期目标
