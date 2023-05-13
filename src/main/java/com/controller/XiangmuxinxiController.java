@@ -13,6 +13,8 @@ import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
+import com.entity.Project;
+import com.entity.XiangmujinduEntity;
 import com.utils.ValidatorUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -176,7 +178,54 @@ public class XiangmuxinxiController {
         xiangmuxinxiService.deleteBatchIds(Arrays.asList(ids));
         return R.ok();
     }
-    
+    @RequestMapping("chart-progress")
+    public R progress(){
+        List<Project> projects = new ArrayList<>();
+        List<XiangmuxinxiEntity> xiangmuxinxiEntities = xiangmuxinxiService.selectList(null);
+        for(XiangmuxinxiEntity xiangmujindu:xiangmuxinxiEntities){
+            Project project = new Project();
+            project.setName(xiangmujindu.getXiangmumingcheng());
+            project.setValue(xiangmujindu.getProgress());
+            projects.add(project);
+        }
+        return R.ok().put("data",projects);
+    }
+    @RequestMapping("chart-histogram")
+    public R histogram(){
+        List<Project> projects = new ArrayList<>();
+        List<XiangmuxinxiEntity> xiangmuxinxiEntities = xiangmuxinxiService.selectList(null);
+        for(XiangmuxinxiEntity xiangmujindu:xiangmuxinxiEntities){
+            Project project = new Project();
+            project.setName(xiangmujindu.getXiangmumingcheng());
+            project.setValue(xiangmujindu.getShengyutianshu());
+            projects.add(project);
+        }
+        return R.ok().put("data",projects);
+    }
+    @RequestMapping("chart-interleaved")
+    public R interleaved(){
+        List<Project> projects = new ArrayList<>();
+        List<XiangmuxinxiEntity> xiangmuxinxiEntities = xiangmuxinxiService.selectList(null);
+        for(XiangmuxinxiEntity xiangmujindu:xiangmuxinxiEntities){
+            Project project = new Project();
+            project.setName(xiangmujindu.getXiangmumingcheng());
+            project.setValue(xiangmujindu.getProgressTime());
+            projects.add(project);
+        }
+        return R.ok().put("data",projects);
+    }
+    @RequestMapping("chart-pie")
+    public R pie(){
+        List<Project> projects = new ArrayList<>();
+        List<XiangmuxinxiEntity> xiangmuxinxiEntities = xiangmuxinxiService.selectList(null);
+        for(XiangmuxinxiEntity xiangmujindu:xiangmuxinxiEntities){
+            Project project = new Project();
+            project.setName(xiangmujindu.getXiangmumingcheng());
+            project.setValue(xiangmujindu.getChengbenjine());
+            projects.add(project);
+        }
+        return R.ok().put("data",projects);
+    }
 	
 
 

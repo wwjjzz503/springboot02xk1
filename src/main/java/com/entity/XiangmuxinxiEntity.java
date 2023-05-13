@@ -13,6 +13,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.apache.commons.beanutils.BeanUtils;
@@ -29,6 +30,7 @@ import com.baomidou.mybatisplus.enums.IdType;
  * @date 2023-05-11 19:59:19
  */
 @TableName("xiangmuxinxi")
+@Data
 public class XiangmuxinxiEntity<T> implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -100,103 +102,37 @@ public class XiangmuxinxiEntity<T> implements Serializable {
 	@DateTimeFormat
 	private Date addtime;
 
-	public Date getAddtime() {
-		return addtime;
-	}
-	public void setAddtime(Date addtime) {
-		this.addtime = addtime;
-	}
+	private String xiangmujindu;
 
-	public Long getId() {
-		return id;
-	}
+	/**
+	 * 投入时间
+	 */
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+	private Integer tourushijian;
+
 	/**
-	 * 设置：项目编号
+	 * 成本金额
 	 */
-	public void setXiangmubianhao(String xiangmubianhao) {
-		this.xiangmubianhao = xiangmubianhao;
-	}
+
+	private Float chengbenjine;
+
 	/**
-	 * 获取：项目编号
+	 * 剩余天数
 	 */
-	public String getXiangmubianhao() {
-		return xiangmubianhao;
-	}
+
+	private int shengyutianshu;
+
 	/**
-	 * 设置：项目名称
+	 * 预期目标
 	 */
-	public void setXiangmumingcheng(String xiangmumingcheng) {
-		this.xiangmumingcheng = xiangmumingcheng;
-	}
-	/**
-	 * 获取：项目名称
-	 */
-	public String getXiangmumingcheng() {
-		return xiangmumingcheng;
-	}
-	/**
-	 * 设置：项目分类
-	 */
-	public void setXiangmufenlei(String xiangmufenlei) {
-		this.xiangmufenlei = xiangmufenlei;
-	}
-	/**
-	 * 获取：项目分类
-	 */
-	public String getXiangmufenlei() {
-		return xiangmufenlei;
-	}
-	/**
-	 * 设置：项目内容
-	 */
-	public void setXiangmuneirong(String xiangmuneirong) {
-		this.xiangmuneirong = xiangmuneirong;
-	}
-	/**
-	 * 获取：项目内容
-	 */
-	public String getXiangmuneirong() {
-		return xiangmuneirong;
-	}
-	/**
-	 * 设置：发布时间
-	 */
-	public void setFabushijian(Date fabushijian) {
-		this.fabushijian = fabushijian;
-	}
-	/**
-	 * 获取：发布时间
-	 */
-	public Date getFabushijian() {
-		return fabushijian;
-	}
-	/**
-	 * 设置：经理账号
-	 */
-	public void setJinglizhanghao(String jinglizhanghao) {
-		this.jinglizhanghao = jinglizhanghao;
-	}
-	/**
-	 * 获取：经理账号
-	 */
-	public String getJinglizhanghao() {
-		return jinglizhanghao;
-	}
-	/**
-	 * 设置：经理姓名
-	 */
-	public void setJinglixingming(String jinglixingming) {
-		this.jinglixingming = jinglixingming;
-	}
-	/**
-	 * 获取：经理姓名
-	 */
-	public String getJinglixingming() {
-		return jinglixingming;
-	}
+
+	private String yuqimubiao;
+
+
+
+
+	private float progress;
+
+	private int progressTime;
 
 }
