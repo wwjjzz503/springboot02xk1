@@ -51,39 +51,28 @@ const menu = {
             ],
             menu: "项目信息管理",
           },
-          {
-            child: [
-              {
-                appFrontIcon: "cuIcon-album",
-                buttons: ["查看", "修改", "删除"],
-                menu: "项目分配",
-                menuJump: "列表",
-                tableName: "xiangmufenpei",
-              },
-            ],
-            menu: "项目分配管理",
-          },
-          {
-            child: [
-              {
-                appFrontIcon: "cuIcon-send",
-                buttons: [
-                  "查看",
-                  "修改",
-                  "删除",
-                  "项目进度统计",
-                  "项目成本统计",
-                  "投入时间统计",
-                  "首页总数",
-                  "首页统计",
-                ],
-                menu: "项目进度",
-                menuJump: "列表",
-                tableName: "xiangmujindu",
-              },
-            ],
-            menu: "项目进度管理",
-          },
+          
+        //   {
+        //     child: [
+        //       {
+        //         appFrontIcon: "cuIcon-send",
+        //         buttons: [
+        //           "查看",
+        //           "修改",
+        //           "删除",
+        //           "项目进度统计",
+        //           "项目成本统计",
+        //           "投入时间统计",
+        //           "首页总数",
+        //           "首页统计",
+        //         ],
+        //         menu: "项目进度",
+        //         menuJump: "列表",
+        //         tableName: "xiangmujindu",
+        //       },
+        //     ],
+        //     menu: "项目进度管理",
+        //   },
           {
             child: [
               {
@@ -141,7 +130,7 @@ const menu = {
                 tableName: "task-info",
               },
             ],
-            menu: "任务信息模块",
+            menu: "任务信息管理",
           },
         //   {
         //     child: [
@@ -219,25 +208,37 @@ const menu = {
               {
                 appFrontIcon: "cuIcon-album",
                 buttons: ["查看", "删除", "提醒"],
-                menu: "项目分配",
+                menu: "任务分配",
                 menuJump: "列表",
                 tableName: "xiangmufenpei",
               },
             ],
-            menu: "项目分配管理",
+            menu: "任务分配管理",
           },
-          {
-            child: [
-              {
-                appFrontIcon: "cuIcon-send",
-                buttons: ["查看"],
-                menu: "项目进度",
-                menuJump: "列表",
-                tableName: "xiangmujindu",
-              },
-            ],
-            menu: "项目进度管理",
-          },
+        //   {
+        //     child: [
+        //       {
+        //         appFrontIcon: "cuIcon-send",
+        //         buttons: ["查看"],
+        //         menu: "项目进度",
+        //         menuJump: "列表",
+        //         tableName: "xiangmujindu",
+        //       },
+        //     ],
+        //     menu: "项目进度管理",
+        //   },
+        //{
+        //     child: [
+        //       {
+        //         appFrontIcon: "cuIcon-album",
+        //         buttons: ["查看", "修改", "删除"],
+        //        menu: "项目分配",
+        //        menuJump: "列表",
+        //         tableName: "xiangmufenpei",
+        //       },
+        //    ],
+        //    menu: "项目分配管理",
+        //  },
           {
             child: [
               {

@@ -758,7 +758,7 @@ export default {
         }
       });
 
-      this.youxianjiOptions = "一般重要关键".split(",");
+      this.youxianjiOptions = "一般,重要,关键".split(",");
       this.$http({
         url: `option/yonghu/zhanghao`,
         method: "get",

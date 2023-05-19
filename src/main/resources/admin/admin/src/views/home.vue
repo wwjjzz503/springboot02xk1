@@ -218,10 +218,8 @@ export default {
                 text: this.isProject + "成本统计饼状图",
               },
               tooltip: {
-                trigger: "axis",
-                axisPointer: {
-                  type: "shadow",
-                },
+                trigger: "item",
+                formatter: "{a} <br/>{b} : {c} ({d}%)",
               },
               toolbox: {
                 show: true,
@@ -234,7 +232,7 @@ export default {
               },
               series: [
                 {
-                  name: this.isProject + "成本饼状图（单位万元）",
+                  name: "项目成本（单位万元）",
                   type: "pie",
                   radius: [30, 100],
                   center: ["50%", "50%"],
@@ -242,7 +240,7 @@ export default {
                   itemStyle: {
                     borderRadius: 8,
                   },
-                  data: res
+                  data: res,
                 },
               ],
             };

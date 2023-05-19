@@ -68,10 +68,19 @@ public class XiangmufenpeiController {
 		}
 		if(tableName.equals("xiangmujingli")) {
 			xiangmufenpei.setJinglizhanghao((String)request.getSession().getAttribute("username"));
+            System.out.println(xiangmufenpei.getJinglizhanghao());
 		}
         EntityWrapper<XiangmufenpeiEntity> ew = new EntityWrapper<XiangmufenpeiEntity>();
+        if(xiangmufenpei.getJinglizhanghao()!=null) {
+            ew.eq("Jinglizhanghao", xiangmufenpei.getJinglizhanghao());
+        }
+        if(xiangmufenpei.getZhanghao()!=null) {
+            ew.eq("zhanghao", xiangmufenpei.getZhanghao());
+        }
 
-		PageUtils page = xiangmufenpeiService.queryPage(params, MPUtil.sort(MPUtil.between(MPUtil.likeOrEq(ew, xiangmufenpei), params), params));
+
+
+        PageUtils page = xiangmufenpeiService.queryPage(params,ew);
 
         return R.ok().put("data", page);
     }

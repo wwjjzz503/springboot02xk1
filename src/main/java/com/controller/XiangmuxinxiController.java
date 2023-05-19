@@ -14,6 +14,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import com.baomidou.mybatisplus.plugins.Page;
+import com.entity.GonggaobanEntity;
 import com.entity.Project;
 import com.entity.XiangmujinduEntity;
 import com.utils.ValidatorUtils;
@@ -66,10 +67,19 @@ public class XiangmuxinxiController {
     public R page(@RequestParam Map<String, Object> params,XiangmuxinxiEntity xiangmuxinxi,
 		HttpServletRequest request){
 
-
-		PageUtils page = xiangmuxinxiService.queryPage(params);
+        String tableName = request.getSession().getAttribute("tableName").toString();
+        if(tableName.equals("xiangmujingli")) {
+            xiangmuxinxi.setJinglizhanghao((String)request.getSession().getAttribute("username"));
+        }
+        EntityWrapper<XiangmuxinxiEntity> ew = new EntityWrapper<XiangmuxinxiEntity>();
+        if(xiangmuxinxi.getJinglizhanghao()!=null) {
+            ew.eq("Jinglizhanghao",xiangmuxinxi.getJinglizhanghao());
+        }
+        PageUtils page = xiangmuxinxiService.queryPage(params, ew);
 
         return R.ok().put("data", page);
+
+
     }
     
     /**
@@ -194,7 +204,7 @@ public class XiangmuxinxiController {
         for(XiangmuxinxiEntity xiangmujindu:xiangmuxinxiEntities){
             Project project = new Project();
             project.setName(xiangmujindu.getXiangmumingcheng());
-            project.setValue(xiangmujindu.getShengyutianshu());
+            project.setValue(xiangmujindu.getTourushijian());
             projects.add(project);
         }
         return R.ok().put("data",projects);

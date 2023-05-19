@@ -57,7 +57,7 @@
             :style="{
               border: '3px solid rgba(222, 239, 255, 1)',
               cursor: 'pointer',
-              padding: '0 24px',
+            //   padding: '0 24px',
               outline: 'none',
               color: '#333',
               borderRadius: '4px',
@@ -77,7 +77,7 @@
             :style="{
               border: '0',
               cursor: 'pointer',
-              padding: '0 24px',
+            //   padding: '0 24px',
               margin: '0 10px 0 0',
               outline: 'none',
               color: '#333',
@@ -96,7 +96,7 @@
             :style="{
               border: '0',
               cursor: 'pointer',
-              padding: '0 24px',
+            //   padding: '0 24px',
               margin: '0 10px 0 0',
               outline: 'none',
               color: '#333',
@@ -152,6 +152,7 @@
           :sortable="true"
           prop="fenpeibianhao"
           label="分配编号"
+          width="150"
         >
           <template slot-scope="scope">
             {{ scope.row.fenpeibianhao }}
@@ -162,6 +163,7 @@
           :sortable="true"
           prop="xiangmumingcheng"
           label="项目名称"
+          width="150"
         >
           <template slot-scope="scope">
             {{ scope.row.xiangmumingcheng }}
@@ -172,6 +174,7 @@
           :sortable="true"
           prop="xiangmufenlei"
           label="项目分类"
+          width="150"
         >
           <template slot-scope="scope">
             {{ scope.row.xiangmufenlei }}
@@ -181,6 +184,7 @@
           :resizable="true"
           prop="youxianji"
           label="优先级"
+          width="150"
         >
           <template slot-scope="scope">
             {{ scope.row.youxianji }}
@@ -191,6 +195,7 @@
           :sortable="true"
           prop="jiezhiriqi"
           label="截止日期"
+          width="150"
         >
           <template slot-scope="scope">
             {{ scope.row.jiezhiriqi }}
@@ -201,6 +206,7 @@
           :sortable="true"
           prop="fenpeishijian"
           label="分配时间"
+          width="150"
         >
           <template slot-scope="scope">
             {{ scope.row.fenpeishijian }}
@@ -211,6 +217,7 @@
           :sortable="true"
           prop="zhanghao"
           label="账号"
+		  width="150"
         >
           <template slot-scope="scope">
             {{ scope.row.zhanghao }}
@@ -221,16 +228,13 @@
           :sortable="true"
           prop="xingming"
           label="姓名"
+		  width="150"
         >
           <template slot-scope="scope">
             {{ scope.row.xingming }}
           </template>
         </el-table-column>
-        <el-table-column
-          :resizable="true"
-          prop="zhiwei"
-          label="职位"
-        >
+        <el-table-column :resizable="true" prop="zhiwei" label="职位">
           <template slot-scope="scope">
             {{ scope.row.zhiwei }}
           </template>
@@ -239,6 +243,7 @@
           :resizable="true"
           prop="jinglizhanghao"
           label="经理账号"
+		  width="150"
         >
           <template slot-scope="scope">
             {{ scope.row.jinglizhanghao }}
@@ -248,18 +253,19 @@
           :resizable="true"
           prop="jinglixingming"
           label="经理姓名"
+		  width="150"
         >
           <template slot-scope="scope">
             {{ scope.row.jinglixingming }}
           </template>
         </el-table-column>
-        <el-table-column width="280" label="操作" fixed="right">
+        <el-table-column width="280" label="操作" fixed="right" style="height: 32px !important">
           <template slot-scope="scope">
             <el-button
               :style="{
                 border: '0',
                 cursor: 'pointer',
-                padding: '0 24px',
+                // padding: '0 24px',
                 margin: '0 10px 5px 0',
                 outline: 'none',
                 color: '#333',
@@ -279,7 +285,7 @@
               :style="{
                 border: '0',
                 cursor: 'pointer',
-                padding: '0 24px',
+                // padding: '0 24px',
                 margin: '0 10px 5px 0',
                 outline: 'none',
                 color: '#333',
@@ -307,7 +313,7 @@
               :style="{
                 border: '0',
                 cursor: 'pointer',
-                padding: '0 24px',
+                // padding: '0 24px',
                 margin: '0 10px 5px 0',
                 outline: 'none',
                 color: '#333',
@@ -335,7 +341,7 @@
               :style="{
                 border: '0',
                 cursor: 'pointer',
-                padding: '0 24px',
+                // padding: '0 24px',
                 margin: '0 10px 5px 0',
                 outline: 'none',
                 color: '#333',
@@ -356,7 +362,7 @@
               :style="{
                 border: '0',
                 cursor: 'pointer',
-                padding: '0 24px',
+                // padding: '0 24px',
                 margin: '0 10px 5px 0',
                 outline: 'none',
                 color: '#333',
@@ -693,7 +699,7 @@ export default {
 .center-form-pv .el-input /deep/ .el-input__inner {
   border: 0;
   border-radius: 4px;
-  padding: 0 12px;
+//   padding: 0 12px;
   box-shadow: 0 0 6px rgba(64, 158, 255, 0.5);
   outline: none;
   color: #000;
@@ -741,7 +747,7 @@ export default {
 }
 
 .el-table /deep/ .el-table__header-wrapper thead tr th {
-  padding: 12px 0;
+//   padding: 12px 0;
   background: linear-gradient(122deg, #e6f2fe 0%, #eaf3ff 100%);
   border-color: #fff;
   border-width: 0 1px 1px 0;
@@ -750,7 +756,7 @@ export default {
 }
 
 .el-table /deep/ .el-table__fixed-header-wrapper thead tr th {
-  padding: 12px 0;
+//   padding: 12px 0;
   background: linear-gradient(122deg, #e6f2fe 0%, #eaf3ff 100%);
   border-color: #fff;
   border-width: 0 1px 1px 0;
@@ -782,7 +788,7 @@ export default {
 }
 
 .el-table /deep/ .el-table__body-wrapper tbody tr td {
-  padding: 12px 0;
+//   padding: 12px 0;
   color: #999;
   background: #fff;
   border-color: #eee;
@@ -796,7 +802,7 @@ export default {
 }
 
 .el-table /deep/ .el-table__body-wrapper tbody tr:hover td {
-  padding: 12px 0;
+//   padding: 12px 0;
   color: #333;
   border-color: #eee;
   border-width: 0 1px 1px 0;
@@ -805,7 +811,7 @@ export default {
 }
 
 .el-table /deep/ .el-table__body-wrapper tbody tr td {
-  padding: 12px 0;
+//   padding: 12px 0;
   color: #999;
   background: #fff;
   border-color: #eee;
@@ -815,7 +821,7 @@ export default {
 }
 
 .el-table /deep/ .el-table__body-wrapper tbody tr td .cell {
-  padding: 0 10px;
+//   padding: 0 10px;
   overflow: hidden;
   word-break: break-all;
   white-space: normal;
@@ -972,7 +978,7 @@ export default {
   .el-input__inner {
   border: 1px solid #dcdfe6;
   cursor: pointer;
-  padding: 0 25px 0 8px;
+//   padding: 0 25px 0 8px;
   color: #606266;
   display: inline-block;
   font-size: 13px;

@@ -134,7 +134,97 @@
             {{ scope.row.xiangmufenlei }}
           </template>
         </el-table-column>
-        <el-table-column width="300" label="操作">
+        <el-table-column
+          :resizable="true"
+          :sortable="true"
+          prop="addtime"
+          label="分配时间"
+        >
+          <template slot-scope="scope">
+            {{ scope.row.addtime }}
+          </template>
+        </el-table-column>
+        <el-table-column
+          :resizable="true"
+          :sortable="true"
+          prop="fenpeibianhao"
+          label="分配编号"
+        >
+          <template slot-scope="scope">
+            {{ scope.row.fenpeibianhao }}
+          </template>
+        </el-table-column>
+        <el-table-column
+          :resizable="true"
+          :sortable="true"
+          prop="fenpeineirong"
+          label="分配内容"
+        >
+          <template slot-scope="scope">
+            {{ scope.row.fenpeineirong }} 
+          </template>
+        </el-table-column>
+        <el-table-column
+          :resizable="true"
+          :sortable="true"
+          prop="fenpeishijian"
+          label="分配时间"
+        >
+          <template slot-scope="scope">
+            {{ scope.row.fenpeishijian }} 
+          </template>
+        </el-table-column>
+        <el-table-column
+          :resizable="true"
+          :sortable="true"
+          prop="jiezhiriqi"
+          label="截止日期"
+        >
+          <template slot-scope="scope">
+            {{ scope.row.jiezhiriqi }} 
+          </template>
+        </el-table-column>
+        <el-table-column
+          :resizable="true"
+          :sortable="true"
+          prop="jinglixingming"
+          label="经理姓名"
+        >
+          <template slot-scope="scope">
+            {{ scope.row.jinglixingming }} 
+          </template>
+        </el-table-column>
+        <el-table-column
+          :resizable="true"
+          :sortable="true"
+          prop="jinglizhanghao"
+          label="经理账号"
+        >
+          <template slot-scope="scope">
+            {{ scope.row.jinglizhanghao }} 
+          </template>
+        </el-table-column>
+        <el-table-column
+          :resizable="true"
+          :sortable="true"
+          prop="xiangmumingcheng"
+          label="项目名称"
+        >
+          <template slot-scope="scope">
+            {{ scope.row.xiangmumingcheng }} 
+          </template>
+        </el-table-column>
+        <el-table-column
+          :resizable="true"
+          :sortable="true"
+          prop="youxianji"
+          label="优先级"
+        >
+          <template slot-scope="scope">
+            {{ scope.row.youxianji }} 
+          </template>
+        </el-table-column>
+        <!-- <el-table-column width="300" label="操作">
           <template slot-scope="scope">
             <el-button
               :style="{
@@ -196,7 +286,7 @@
               >删除</el-button
             >
           </template>
-        </el-table-column>
+        </el-table-column> -->
       </el-table>
       <el-pagination
         @size-change="sizeChangeHandle"
@@ -320,7 +410,7 @@ export default {
         params["xiangmufenlei"] = "%" + this.searchForm.xiangmufenlei + "%";
       }
       this.$http({
-        url: "xiangmufenlei/page",
+        url: "xiangmufenpei/page",
         method: "get",
         params: params,
       }).then(({ data }) => {
